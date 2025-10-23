@@ -254,7 +254,7 @@ div[data-baseweb="select"]:focus-within {
 @st.cache_data
 def load_data():
     # PASTIKAN PATH FILE ANDA SUDAH BENAR DI SINI
-    df = pd.read_csv("C:/Users/USER/Documents/SEMESTER 3/Dashboard EDA/HOTEL_OKUPANSI_FIX.csv")
+    df = pd.read_csv('HOTEL_OKUPANSI_FIX.csv')
     df['arrival_date'] = pd.to_datetime(df['arrival_date'])
     
     # Pastikan kolom event_name ada, kalau tidak buat default
@@ -919,7 +919,7 @@ try:
 
 except FileNotFoundError:
     st.error("❌ File tidak ditemukan! Pastikan path file CSV sudah benar.")
-    st.info("Path yang dicari: C:/Users/USER/Documents/SEMESTER 3/Dashboard EDA/data/HOTEL_OKUPANSI_FIX.csv")
+    st.info("Path yang dicari: 'HOTEL_OKUPANSI_FIX.csv'")
 except Exception as e:
     st.error(f"❌ Terjadi error: {str(e)}")
     st.info("Silakan cek kembali data dan format kolom CSV Anda.")
